@@ -1,0 +1,126 @@
+// Использование математики
+@use 'sass:math';
+
+// Подключение миксинов
+@import './base/_mixins.scss';
+
+// Подключение файла обнуляющих стилей
+@import './base/_null-style.scss';
+
+// ====================================================================================================================================================================================================================
+// Общие параметры
+
+// ====================================================================================================================================================================================================================
+// Оболочка
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	> main {
+		flex: 1 1 auto;
+	}
+}
+
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+// ====================================================================================================================================================================================================================
+// Настройки
+
+// ====================================================================================================================================================================================================================
+// Настройки адаптива
+
+// ====================================================================================================================================================================================================================
+// // Общие элементы
+
+// ====================================================================================================================================================================================================================
+// Заголовки секций
+
+.image {
+	position: relative;
+	width: 100%;
+	min-height: calc(820px - 50px);
+	background: url('../img/1.webp');
+	// background-position: center center;
+	background-size: initial;
+	animation: img 35s linear infinite;
+}
+
+@keyframes img {
+	0% {
+		background: url('../img/1.webp');
+	}
+	50% {
+		background: url('../img/2.webp');
+	}
+	100% {
+		background: url('../img/1.webp');
+	}
+}
+
+.header {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	background: #000;
+	color: #fff;
+	// .header__inner
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	// .header__logo
+	&__logo {
+		font-weight: 700;
+		font-size: 30px;
+		text-transform: uppercase;
+	}
+	// .header__list
+	&__list {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		// gap: 10px;
+		width: 100%;
+	}
+	// .header__list-item
+	&__list-item {
+		line-height: 50px;
+		padding: 0 20px;
+		font-size: 22px;
+		&.active {
+			background-color: #777;
+		}
+		&:hover {
+			background-color: #777;
+		}
+	}
+	// .header__list-link
+	&__list-link {
+	}
+}
+
+.description {
+	width: 100%;
+	padding: 50px 100px;
+	background-color: #d6d5c1;
+	// .description__inner
+	&__inner {
+	}
+	// .description__title
+	&__title {
+		font-size: 48px;
+		margin-bottom: 25px;
+	}
+	p {
+		font-size: 22px;
+		margin-bottom: 25px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
