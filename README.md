@@ -1,4 +1,3 @@
-# FixedMenu-AnimatedBG
 **Project:** FixedMenu-AnimatedBG
 
 ---
